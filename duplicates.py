@@ -2,18 +2,20 @@ import os
 
 
 def get_duplicate_files(directory):
-    filename_list = []
-    duplicate_file = []
+    file_info_list = []
+    duplicate_list = []
     for root, directories, files in os.walk(directory):
         for filename in files:
-            if filename in filename_list:
-                duplicate_file.append(filename)
+            file_info = (
+                (filename, os.path.getsize((os.path.join(root, filename)))))
+            if file_info in file_info_list:
+                duplicate_list.append(file_info)
             else:
-                filename_list.append(filename)
-    return ' '.join(set(duplicate_file))
+                file_info_list.append(file_info)
+    return duplicate_list
 
 
 if __name__ == '__main__':
     _filepath = input('Enter directorys path for check: ')
     print('Duplicate files: ')
-    print(get_filepaths(_filepath))
+    print(get_duplicate_files(_filepath))
