@@ -12,7 +12,7 @@ def get_duplicate_files(directory):
                 duplicate_list.append(file_info)
             else:
                 file_info_list.append(file_info)
-    return duplicate_list
+    return [file[0] for file in duplicate_list]
 
 
 if __name__ == '__main__':
