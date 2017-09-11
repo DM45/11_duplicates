@@ -4,7 +4,7 @@ Check duplicate files in directory and all subdirectorys.
 
 # Requirements
 
-Python 3.5
+Python 3.5 or above
 
 # Quickstart
 
@@ -17,11 +17,11 @@ python duplicates.py # or python3 maybe
 directory path
 ```
 # Output example
-
+```bash
 Duplicate files:
 
 ['text.txt']
-
+```
 # Project Goals
 
 The code is written for educational purposes. Training course for web-developers - [DEVMAN.org](https://devman.org)
